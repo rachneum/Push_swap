@@ -1,14 +1,18 @@
-# ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "libft.h"
 
 typedef struct s_stack
 {
-	char			*str_buf;
-	struct s_list	*next;
-    struct s_list   *prev;
-}					t_stack;
+    int             value;
+    int             index;
+    struct s_stack  *next;
+    struct s_stack  *prev;
+}                   t_stack;
 
-# endif PUSH_SWAP_H
+void    radix_sort(t_stack *a, t_stack *b);
+
+#endif
