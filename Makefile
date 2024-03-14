@@ -8,7 +8,7 @@ src = 	./src/main.c \
 		./src/reverse_rotate_command.c \
 		./src/push_swap_utils \
 		./src/stacks.c \
-		./src/radix.c \
+		./src/radix_sort.c \
 
 OBJS 	= $(src:.c=.o)
 
