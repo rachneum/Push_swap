@@ -20,7 +20,6 @@ static long ft_atol(const char *str);
 static void append(t_stack **stack, int nb);
 static void	swap(t_stack **head);
 
-void    radix_sort(t_stack *a, t_stack *b);
 void	free_stack(t_stack **stack);
 void	free_errors(t_stack **a);
 void    pa(t_stack **a, t_stack **b);
@@ -39,7 +38,8 @@ void    init_stack_a(t_stack **a, char **argv);
 int	error_syntax(char	*str_nb);
 int	error_duplicate(t_stack *a, int nb);
 int nb_len(int nbr);
-int nb_into_index(t_stack *a);
+int find_max(t_stack *a);
+int radix_sort_index(t_stack *a);
 
 t_stack find_last_node(t_stack *stack);
 

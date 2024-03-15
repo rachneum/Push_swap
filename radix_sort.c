@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:07:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/14 15:08:24 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/14 16:00:15 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,19 @@
 void    radix_sort(t_stack *a, t_stack *b)
 {
 
+}
+
+int radix_sort_index(t_stack *a)
+{
+    int max_element;
+    
+    max_element = find_max(a);
+    if (!a)
+        return (0);
+    while (a)
+    {
+        
+    }
 }
 int nb_len(int nbr)//Permet d'avoir le nombre de chiffres de mon nb.
 {
@@ -33,18 +46,19 @@ int nb_len(int nbr)//Permet d'avoir le nombre de chiffres de mon nb.
     return (len);
 }
 
-int nb_into_index(t_stack *a)
+int find_max(t_stack *a)
 {
-    int nb_len;
+    int max_element;
 
-    nb_len = INT_MIN;
+    max_element = INT_MIN;
     if (!a)
         return (0);
     while (a)
     {
-        if (nb_len < nb_len(a->value))
-            nb_len = nb_len(a->value);//Permettre d'avoir mon nb_MAX (nombre contenant le plus de chiffres, qui mer servira dans mon Radix).
+        if (max_element < nb_len(a->value))
+            max_element = nb_len(a->value);//Permettre d'avoir la taille du nombre contenant le plus de chiffres.
         a = a->next;
     }
-    return (nb_len);
+    return (max_element);
+
 }
