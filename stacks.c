@@ -65,3 +65,16 @@ void    init_stack_a(t_stack **a, char **argv)
         i++;
     }
 }
+void	index_stack(t_stack **stack)
+{
+	t_stack	*head;
+	int		idx;
+
+	idx = 0;
+	head = get_next_min(stack);
+	while (head)
+	{
+		head->index = idx++;
+		head = get_next_min(stack);
+	}
+}
