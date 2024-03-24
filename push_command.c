@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:11:14 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/18 14:00:29 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 14:57:57 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void push(t_stack **dst, t_stack **src)//Fonction qui pousse un noeud supérieur, d'une pile au noeud supérieur d'une autre.
 {
@@ -39,8 +39,10 @@ static void push(t_stack **dst, t_stack **src)//Fonction qui pousse un noeud sup
 void    pa(t_stack **a, t_stack **b)
 {
     push(a, b);
+    write(1, "pa\n", 3);
 }
 void    pb(t_stack **b, t_stack **a)
 {
     push(b, a);
+    write(1, "pb\n", 3);
 }

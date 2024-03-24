@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:10:32 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/12 10:15:08 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 14:58:27 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	rev_rotate(t_stack **stack)//Définit une fonction qui fait pivoter le noeud inférieur d'une pile vers le haut.
 {
@@ -29,14 +29,17 @@ static void	rev_rotate(t_stack **stack)//Définit une fonction qui fait pivoter 
 void    rra(t_stack **a)
 {
     rev_rotate(a);
+	write(1, "rra\n", 4);
 }
 void    rrb(t_stack **b)
 {
     rev_rotate(b);
+	write(1, "rrb\n", 4);
 }
 void    rrr(t_stack **a, t_stack **b)
 {
     rev_rotate(a);
     rev_rotate(b);
+	write(1, "rrr\n", 4);
     
 }

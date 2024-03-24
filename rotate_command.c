@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:01:06 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/12 10:15:05 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 14:58:34 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	rotate(t_stack **stack)//Fonction qui fait pivoter le noeud supérieur de la pile vers le bas de la pile.
 {
@@ -29,15 +29,18 @@ static void	rotate(t_stack **stack)//Fonction qui fait pivoter le noeud supérie
 void	ra(t_stack_node **a)//Faites pivoter le noeud supérieur "a" vers le bas de la pile et imprimer l'instruction.
 {
 	rotate(a);
+	write(1, "ra\n", 3);
 }
 
 void	rb(t_stack_node **b)//Faire pivoter le noeud supérieur 'b' vers le bas de la pile et imprimer l'instruction.
 {
 	rotate(b);
+	write(1, "rb\n", 3);
 }
 
 void	rr(t_stack_node **a, t_stack_node **b)//Faire pivoter simultanément les noeuds supérieurs "a" et "b" vers le bas de la pile et imprimer l'instruction.
 {
 	rotate(a);
 	rotate(b);
+	write(1, "rr\n", 3);
 }

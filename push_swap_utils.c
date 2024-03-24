@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:11:05 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/09 21:59:57 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 14:58:03 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_stack find_last_node(t_stack *stack)
 {

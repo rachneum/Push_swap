@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:01:45 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/09 21:59:56 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 14:57:34 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	error_syntax(char	*str_nb)//Définit une fonction pour gérer les erreurs de syntaxe et renvoie « 1 » pour « erreur » si l'une des conditions suivantes est remplie.
 {

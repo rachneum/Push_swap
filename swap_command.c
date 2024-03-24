@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:00:50 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/12 10:51:52 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 14:59:14 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	swap(t_stack **head)//Fonction qui permute les positions du noeud supérieur et du deuxième noeud d'une pile.
 {
@@ -28,15 +28,18 @@ static void	swap(t_stack **head)//Fonction qui permute les positions du noeud su
 void	sa(t_stack_node	**a)//Échanger les deux premiers noeuds de la pile 'a' et imprimer l'instruction.
 {
 	swap(a);
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_stack_node **b)//Échanger les deux premiers noeuds de la pile 'b' et imprimer l'instruction.
 {
 	swap(b);
+	write(1, "sb\n", 3);
 }
 
 void	ss(t_stack_node **a, t_stack_node **b)//Échanger simultanément les deux premiers noeuds de la pile et imprimer l'instruction.
 {
 	swap(a);
 	swap(b);
+	write(1, "ss\n", 3);
 }

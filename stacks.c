@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stacks.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/24 14:58:54 by rachou            #+#    #+#             */
+/*   Updated: 2024/03/24 14:59:00 by rachou           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../push_swap.h"
+
 static long ft_atol(const char *str)//Définit une fonction qui convertit chaque chaîne en une valeur longue.
 {
     long	rlt;
