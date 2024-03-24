@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 15:27:42 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 14:58:13 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 15:02:19 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	stack_len(t_stack **a)
 {

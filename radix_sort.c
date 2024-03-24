@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:07:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 14:58:19 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 15:02:25 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 
 static int	ft_check_index(t_stack **a, int len)//Vérifie l'index d'un élément dans une pile, ce qui est utile dans le contexte du tri pour déterminer la position correcte d'un élément.

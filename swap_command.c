@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:00:50 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 14:59:14 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 15:02:53 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 static void	swap(t_stack **head)//Fonction qui permute les positions du noeud supérieur et du deuxième noeud d'une pile.
 {

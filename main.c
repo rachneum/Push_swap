@@ -6,11 +6,11 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 14:40:30 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 14:57:47 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 15:01:40 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int main(int argc, char **argv)
 {
