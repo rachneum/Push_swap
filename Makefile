@@ -1,14 +1,15 @@
 NAME	= push_swap
 
-src = 	./src/main.c \
-		./src/error.c \
-		./src/push_command.c \
-		./src/swap_command.c \
-		./src/rotate_command.c \
-		./src/reverse_rotate_command.c \
-		./src/push_swap_utils \
-		./src/stacks.c \
-		./src/radix_sort.c \
+
+src = 	./main.c \
+		./error.c \
+		./push_command.c \
+		./swap_command.c \
+		./rotate_command.c \
+		./reverse_rotate_command.c \
+		./push_swap_utils \
+		./stacks.c \
+		./radix_sort.c \
 
 OBJS 	= $(src:.c=.o)
 
@@ -17,6 +18,8 @@ HEADER	= includes
 CC 		= cc
 
 CFLAGS 	= -Wall -Wextra -Werror
+
+LIB = libft/libft.a
 
 .c.o:		%.o : %.c
 	$(CC) $(CFLAGS) -I$(HEADER) -c $< -o $(<:.c=.o)

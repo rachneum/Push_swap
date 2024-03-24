@@ -3,7 +3,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "../libft/include/libft.h"
+# include <stdio.h>
+# include "../Libft/libft.h"
 
 typedef struct s_stack
 {
@@ -27,12 +28,12 @@ void    pb(t_stack **b, t_stack **a);
 void    rra(t_stack **a);
 void    rrb(t_stack **b);
 void    rrr(t_stack **a, t_stack **b);
-void	ra(t_stack_node **a);
-void	rb(t_stack_node **b);
-void	rr(t_stack_node **a, t_stack_node **b);
-void	sa(t_stack_node	**a);
-void	sb(t_stack_node **b);
-void	ss(t_stack_node **a, t_stack_node **b);
+void	ra(t_stack **a);
+void	rb(t_stack **b);
+void	rr(t_stack **a, t_stack **b);
+void	sa(t_stack	**a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
 void    init_stack_a(t_stack **a, char **argv);
 
 int	error_syntax(char	*str_nb);
