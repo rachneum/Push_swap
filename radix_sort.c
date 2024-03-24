@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:07:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/19 09:35:13 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/24 12:08:21 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,3 @@ int	ft_check_sort(t_stack **a)
 	*a = first;//Après avoir parcouru toute la pile, on réinitialise la pile à sa position initiale en la pointant vers first.
 	return (1);//Retourne 1 pour indiquer que la pile est triée.
 }
-
