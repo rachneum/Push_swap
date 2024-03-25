@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:11:05 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 15:02:12 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/25 10:37:18 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack find_last_node(t_stack *stack)
+t_stack *find_last_node(t_stack *stack)
 {
     if (!stack)
         return (NULL);

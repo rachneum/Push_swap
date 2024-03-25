@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:01:45 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 15:02:00 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/25 09:45:39 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	error_syntax(char	*str_nb)//Définit une fonction pour gérer les erreurs de
 {
 	if (!(*str_nb == '+' || *str_nb == '-' || (*str_nb >= '0' && *str_nb <= '9')))//Vérifie si le premier caractère de la chaîne d'entrée ne contient pas de signe ou de chiffre.
 		return (1);
-	if ((*str_nb == '+' || *str_nb == '-') && !(*str_nb[1] >= '0' && *str_nb[1] <= '9'))//Vérifie si le premier caractère de la chaîne d'entrée contient un signe, mais que le deuxième caractère ne contient pas de chiffre.
+	if ((*str_nb == '+' || *str_nb == '-') && !(str_nb[1] >= '0' && str_nb[1] <= '9'))//Vérifie si le premier caractère de la chaîne d'entrée contient un signe, mais que le deuxième caractère ne contient pas de chiffre.
 		return (1);
 	while (*++str_nb)//Si les conditions d'erreur ci-dessus sont passées, pré-incrémenter pour pointer vers le caractère suivant de la chaîne et boucler jusqu'à ce que la fin de la chaîne soit atteinte.
 	{
@@ -60,6 +60,6 @@ void	free_stack(t_stack **stack)//Définit une fonction pour libérer une pile s
 void	free_errors(t_stack **a)//Définir une fonction qui, en cas d'erreur unique, libère la pile et imprime un message d'erreur.
 {
 	free_stack(a);
-	ft_printf("Error\n");
+	write(1, "Error\n", 6);
 	exit(1);//Instruction permettant de mettre fin immédiatement au programme.
 }

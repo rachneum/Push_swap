@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap_command.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:00:50 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 15:02:53 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/25 09:46:43 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ static void	swap(t_stack **head)//Fonction qui permute les positions du noeud su
 	(*head)->prev = NULL;//Définit le pointeur 'prev' de la 'nouvelle tête' sur 'NULL' pour terminer l'échange.
 }
 
-void	sa(t_stack_node	**a)//Échanger les deux premiers noeuds de la pile 'a' et imprimer l'instruction.
+void	sa(t_stack	**a)//Échanger les deux premiers noeuds de la pile 'a' et imprimer l'instruction.
 {
 	swap(a);
 	write(1, "sa\n", 3);
 }
 
-void	sb(t_stack_node **b)//Échanger les deux premiers noeuds de la pile 'b' et imprimer l'instruction.
+void	sb(t_stack **b)//Échanger les deux premiers noeuds de la pile 'b' et imprimer l'instruction.
 {
 	swap(b);
 	write(1, "sb\n", 3);
 }
 
-void	ss(t_stack_node **a, t_stack_node **b)//Échanger simultanément les deux premiers noeuds de la pile et imprimer l'instruction.
+void	ss(t_stack **a, t_stack **b)//Échanger simultanément les deux premiers noeuds de la pile et imprimer l'instruction.
 {
 	swap(a);
 	swap(b);

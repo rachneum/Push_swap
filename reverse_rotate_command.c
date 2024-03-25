@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate_command.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:10:32 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/24 15:02:31 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/25 10:20:32 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	rev_rotate(t_stack **stack)//Définit une fonction qui fait pivoter 
 
 	if (!*stack || !(*stack)->next)//Vérifie si la pile est vide ou s'il y a un noeud.
 		return ;
-	last = find_last(*stack);
+	last = find_last_node(*stack);
 	last->prev->next = NULL;//Attribuer à l'attribut 'next' du noeud avant lui-même, 'NULL' le définissant effectivement comme dernier noeud actuel.
 	last->next = *stack;//Attribuer à son propre attribut 'next' comme noeud supérieur de la pile.
 	last->prev = NULL;//Se détache du noeud qui le précède.
