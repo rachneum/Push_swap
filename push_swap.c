@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 15:04:21 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/26 11:16:35 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/26 11:19:12 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	target_node(t_stack *a, t_stack *b)
                 a->target_node = b->value;
             b = b->next;
         }
-        if (target == INT_MAX)
+        if (target == LONG_MAX)
             a->target_node = find_max(b);
         else
 
