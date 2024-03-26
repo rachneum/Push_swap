@@ -10,8 +10,10 @@ typedef struct s_stack
 {
     int             value;
     int             index;
+    int             push_cost;
     struct s_stack  *next;
     struct s_stack  *prev;
+    struct s_stack  *target_node;
 }                   t_stack;
 
 /*static void push(t_stack **dst, t_stack **src);

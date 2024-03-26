@@ -1,15 +1,14 @@
 NAME	= push_swap
 
-
-src = 	./main.c \
-		./error.c \
-		./push_command.c \
-		./swap_command.c \
-		./rotate_command.c \
-		./reverse_rotate_command.c \
-		./push_swap_utils \
+src = 	./error.c \
+		./ft_push.c \
+		./ft_reverse_rotate.c \
+		./ft_rotate.c \
+		./ft_swap.c \
+		./main.c \
+		./push_swap_utils.c \
+		./push_swap.c \
 		./stacks.c \
-		./radix_sort.c \
 
 OBJS 	= $(src:.c=.o)
 
