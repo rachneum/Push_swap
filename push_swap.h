@@ -4,6 +4,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>//Bibli me permettant d'utiliser LONG_MIN et LON_MAX.
 # include "../Libft/libft.h"
 
 typedef struct s_stack
@@ -42,10 +43,10 @@ int main(int argc, char **argv);
 int	error_syntax(char	*str_nb);
 int	error_duplicate(t_stack *a, int nb);
 int nb_len(int nbr);
-int find_max(t_stack *a);
 int radix_sort_index(t_stack *a);
 
 t_stack *find_last_node(t_stack *stack);
-
+t_stack	*find_max(t_stack *stack);
+t_stack	*find_min(t_stack *stack);
 
 #endif

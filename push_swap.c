@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 15:04:21 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/26 15:19:49 by rachou           ###   ########.fr       */
+/*   Updated: 2024/03/31 18:04:17 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	target_node_b(t_stack *a, t_stack *b)//Fonction qui me permet de trouver les
         {
             if ((a->value > current_b->value) && (target < current_b->value))
             {
-                a->current_target_node = current_b->value;
+                a-> current_target_node = current_b->value;
                 target = current_b->value;
             }
             current_b = current_b->next;
         }
         if (target == LONG_MIN)
-            a->current_target_node = find_max(b);//Dans le cas où mon noeud 'a' ne trouve pas un noeud target le plus proche petit, j'irai trouver le plus proche grand à la place.
+            a-> current_target_node = find_max(b);//Dans le cas où mon noeud 'a' ne trouve pas un noeud target le plus proche petit, j'irai trouver le plus proche grand à la place.
         else
 
 
