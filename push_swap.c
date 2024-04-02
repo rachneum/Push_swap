@@ -6,13 +6,13 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 15:04:21 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/31 18:04:17 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/02 14:00:32 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	target_node_b(t_stack *a, t_stack *b)//Fonction qui me permet de trouver les noeuds target dans ma stack 'b' pour les noeuds de la stack 'a'.
+int target_node_b(t_stack *a, t_stack *b)//Fonction qui me permet de trouver les noeuds target dans ma stack 'b' pour les noeuds de la stack 'a'.
 {
     t_stack *current_b;//Permet de me servir de ma stack 'b' sans la modifier (c'est une sorte de copie)
     t_stack *current_target_node;
@@ -27,7 +27,7 @@ int	target_node_b(t_stack *a, t_stack *b)//Fonction qui me permet de trouver les
         {
             if ((a->value > current_b->value) && (target < current_b->value))
             {
-                a-> current_target_node = current_b->value;
+                a->current_target_node = current_b->value;
                 target = current_b->value;
             }
             current_b = current_b->next;
@@ -41,7 +41,7 @@ int	target_node_b(t_stack *a, t_stack *b)//Fonction qui me permet de trouver les
     }
 }
 
-int	target_node_a(t_stack *a, t_stack *b)//Fonction qui me permet de trouver les noeuds target dans ma stack 'a' pour les noeuds de la stack 'b'.
+int target_node_a(t_stack *a, t_stack *b)//Fonction qui me permet de trouver les noeuds target dans ma stack 'a' pour les noeuds de la stack 'b'.
 {
     t_stack *current_a;//Permet de me servir de ma stack 'a' sans la modifier (c'est une sorte de copie)
     t_stack *current_target_node;

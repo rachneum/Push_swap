@@ -1,18 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 15:21:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/31 18:05:52 by rachou           ###   ########.fr       */
+/*   Created: 2024/04/02 11:59:59 by rachou            #+#    #+#             */
+/*   Updated: 2024/04/02 14:06:50 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sort_three(t_stack *a)
+bool    stack_sorted(t_stack *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack-> next)
+	{
+		if (stack->value > stack->next->value)
+			return (false);
+		stack = stack->next;
+	}
+	return (true);
+}
+
+t_stack sort_stack(t_stack **a, t_stack **b)
+{
+	int	len_a;
+
+	len_a = stack_len(*a);
+	if ((len_a > 3) && !stack_sorted(*a))
+	{
+		pb(&b, &a);
+		len_a--;
+	}
+	if ((len_a > 3) && !stack_sorted(*a))
+
+}
+
+void    sort_three(t_stack **a)
 {
     t_stack *biggest_node;
     t_stack *smallest_node;

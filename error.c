@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:01:45 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/25 09:45:39 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/02 13:54:14 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	error_syntax(char	*str_nb)//Définit une fonction pour gérer les erreurs de syntaxe et renvoie « 1 » pour « erreur » si l'une des conditions suivantes est remplie.
+int	error_syntax(char *str_nb)//Définit une fonction pour gérer les erreurs de syntaxe et renvoie « 1 » pour « erreur » si l'une des conditions suivantes est remplie.
 {
 	if (!(*str_nb == '+' || *str_nb == '-' || (*str_nb >= '0' && *str_nb <= '9')))//Vérifie si le premier caractère de la chaîne d'entrée ne contient pas de signe ou de chiffre.
 		return (1);

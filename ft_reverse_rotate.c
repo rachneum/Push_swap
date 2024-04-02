@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate_command.c                           :+:      :+:    :+:   */
+/*   ft_reverse_rotate.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:10:32 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/25 10:20:32 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/02 13:55:12 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ static void	rev_rotate(t_stack **stack)//Définit une fonction qui fait pivoter 
 	last->next->prev = last;//Mise à jour le dernier noeud actuel de la pile.
 }
 
-void    rra(t_stack **a)
+void	rra(t_stack **a)
 {
     rev_rotate(a);
 	write(1, "rra\n", 4);
 }
-void    rrb(t_stack **b)
+void	rrb(t_stack **b)
 {
     rev_rotate(b);
 	write(1, "rrb\n", 4);
 }
-void    rrr(t_stack **a, t_stack **b)
+void	rrr(t_stack **a, t_stack **b)
 {
     rev_rotate(a);
     rev_rotate(b);
