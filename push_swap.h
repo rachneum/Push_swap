@@ -39,7 +39,7 @@ void	rr(t_stack **a, t_stack **b);
 void	sa(t_stack	**a);
 void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);
-void	index(t_stack_node *stack)
+void	current_index(t_stack *stack);
 void	push_cost(t_stack *a, t_stack *b);
 void	sort_three(t_stack **a);
 void	init_stack_a(t_stack **a, char **argv);

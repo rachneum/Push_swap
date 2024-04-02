@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:11:05 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/02 14:13:15 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/02 14:21:55 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ int	stack_len(t_stack *stack)//Permet de calculer la longuer de ma stack et me s
 	return (count);
 }
 
-void	index(t_stack_node *stack)
+void	current_index(t_stack *stack)
 {
 	int	i;
 	int	median;
 
 	i = 0;
-	median = (stacklen(stack) / 2);
+	median = (stack_len(stack) / 2);
 	while (stack)
 	{
 		stack->index = i;
