@@ -1,14 +1,16 @@
 NAME	= push_swap
 
-src = 	./error.c \
+
+src = 	./main.c \
+		./error.c \
 		./ft_push.c \
-		./ft_reverse_rotate.c \
-		./ft_rotate.c \
 		./ft_swap.c \
-		./main.c \
-		./push_swap_utils.c \
-		./push_swap.c \
-		./stacks.c \
+		./ft_rotate.c \
+		./ft_reverse_rotate.c \
+		./cost_analisis.c \
+		./sort_stack.c \
+		./stack_utils.c \
+		./stack.c \
 
 OBJS 	= $(src:.c=.o)
 

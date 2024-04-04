@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_utils.c                                  :+:      :+:    :+:   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 12:11:05 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/02 14:21:55 by rachou           ###   ########.fr       */
+/*   Created: 2024/04/04 16:35:41 by rachou            #+#    #+#             */
+/*   Updated: 2024/04/04 17:05:54 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ t_stack	*find_last_node(t_stack *stack)
 {
     if (!stack)
         return (NULL);
-    while (stack->next)// Boucle jusqu'à ce que la fin de la pile soit atteinte.
+    while (stack->next)//Boucle jusqu'à ce que la fin de la pile soit atteinte.
         stack = stack->next;
     return (stack);
 }
-int	stack_len(t_stack *stack)//Permet de calculer la longuer de ma stack et me sevira plus tard pour ma médiane.
+
+int	stack_len(t_stack *stack)//Calculer la longuer de ma stack et me sevira plus tard pour ma médiane et mon sort_three
 {
 	int	count;
 
@@ -33,25 +34,6 @@ int	stack_len(t_stack *stack)//Permet de calculer la longuer de ma stack et me s
 		stack = stack->next;
 	}
 	return (count);
-}
-
-void	current_index(t_stack *stack)
-{
-	int	i;
-	int	median;
-
-	i = 0;
-	median = (stack_len(stack) / 2);
-	while (stack)
-	{
-		stack->index = i;
-		if (i <= median)
-			stack->median = true;
-		else
-			stack->median = false;
-		stack = stack->next;
-		i++;
-	}
 }
 
 t_stack	*find_min(t_stack *stack)//Recherche une pile et renvoie le noeud avec le plus petit nombre.

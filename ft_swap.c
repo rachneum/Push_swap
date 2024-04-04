@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_swap.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 12:00:50 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/02 13:56:08 by rachou           ###   ########.fr       */
+/*   Created: 2024/04/04 14:08:39 by rachou            #+#    #+#             */
+/*   Updated: 2024/04/04 14:54:00 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	swap(t_stack **head)//Fonction qui permute les positions du noeud supérieur et du deuxième noeud d'une pile.
+static void	swap(t_stack **head)//Permute les positions du noeud supérieur et du deuxième noeud d'une pile.
 {
 	if (!*head || !(*head)->next)//Vérifie si le noeud d'arrêt ou le deuxième noeud d'une pile existe.
 		return ;
@@ -25,19 +25,19 @@ static void	swap(t_stack **head)//Fonction qui permute les positions du noeud su
 	(*head)->prev = NULL;//Définit le pointeur 'prev' de la 'nouvelle tête' sur 'NULL' pour terminer l'échange.
 }
 
-void	sa(t_stack	**a)//Échanger les deux premiers noeuds de la pile 'a' et imprimer l'instruction.
+void	sa(t_stack	**a)//Échange les deux premiers noeuds de la pile 'a' et imprimer l'instruction.
 {
 	swap(a);
 	write(1, "sa\n", 3);
 }
 
-void	sb(t_stack **b)//Échanger les deux premiers noeuds de la pile 'b' et imprimer l'instruction.
+void	sb(t_stack **b)//Échange les deux premiers noeuds de la pile 'b' et imprimer l'instruction.
 {
 	swap(b);
 	write(1, "sb\n", 3);
 }
 
-void	ss(t_stack **a, t_stack **b)//Échanger simultanément les deux premiers noeuds de la pile et imprimer l'instruction.
+void	ss(t_stack **a, t_stack **b)//Échange simultanément les deux premiers noeuds de la pile et imprimer l'instruction.
 {
 	swap(a);
 	swap(b);

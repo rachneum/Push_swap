@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stacks.c                                           :+:      :+:    :+:   */
+/*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/24 14:58:54 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/03 16:13:42 by rachou           ###   ########.fr       */
+/*   Created: 2024/04/04 16:31:04 by rachou            #+#    #+#             */
+/*   Updated: 2024/04/04 17:05:13 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static long ft_atol(const char *str)//Définit une fonction qui convertit chaque chaîne en une valeur longue.
+static long ft_atol(const char *str)//Convertit chaque chaîne en une valeur longue.
 {
     long	rlt;
 	char	sign;
@@ -35,21 +35,21 @@ static long ft_atol(const char *str)//Définit une fonction qui convertit chaque
 	return (rlt * sign);
 }
 
-static void append(t_stack **stack, int nb)//Fonction qui recherche le dernier noeud à ajouter à la liste chaînée.
+static void append(t_stack **stack, int nb)//Recherche le dernier noeud à ajouter à la liste chaînée.
 {
     t_stack *new_node;//Pour stocker un pointeur vers le nouveau noeud à créer avec la valeur 'n'.
     t_stack *last_node;//Pour stocker un pointeur vers le dernier noeud actuel de la pile.
 
     if (!stack)
         return ;
-    new_node = malloc(sizeof(t_stack));//Alloue de la mémoire pour le nouveau noeud.
+    new_node = malloc(sizeof(t_stack));
     if (!new_node)
         return ;
     new_node->next = NULL;//Définit le pointeur suivant du nouveau noeud sur NULL car ce sera le dernier noeud de la liste.
     new_node->value = nb;//Définit les données "suivantes" du nouveau neoud sur la valeur "n".
     if (!(*stack))//Vérifie si la pile est vide ou pointe actuellement vers NULL, indiquant qu'un premier noeud doit être trouvé.
     {
-        *stack = new_node;//S'il est vide, mettre à jour le pointeur *stack pour pointer vers le noeud, ce qui en fait le nouveau tête de la liste chaînée.
+        *stack = new_node;//Si il est vide, mettre à jour le pointeur *stack pour pointer vers le noeud, ce qui en fait le nouveau tête de la liste chaînée.
         new_node->prev = NULL;//Définit le pointeur précédent du noeud principal sur NULL car il s'agit du premier noeud.
     }
     else//Si la pile n'est pas vide, ca signifie qu'il y a des noeuds existants dans la liste chaînée.
@@ -60,7 +60,7 @@ static void append(t_stack **stack, int nb)//Fonction qui recherche le dernier n
     }
 }
 
-void    stack_init(t_stack **a, char **argv)//Fonction qui lance la pile 'a' en gérant toutes les erreurs et en ajoutant les noeuds requis pour compléter une pile
+void    stack_init(t_stack **a, char **argv)//Lance la pile 'a' en gérant toutes les erreurs et en ajoutant les noeuds requis pour compléter une pile
 {
     long    nb;
     int     i;
@@ -71,11 +71,11 @@ void    stack_init(t_stack **a, char **argv)//Fonction qui lance la pile 'a' en 
         if(error_syntax(argv[i]))
             free_errors(a);
         nb = ft_atol(argv[i]);
-        if (nb > INT_MAX || nb < INT_MIN)//Vérifie overflow.
+        if (nb > LONG_MAX || nb < LONG_MIN)//Vérifie overflow.
             free_errors(a);
         if (error_duplicate(*a, nb))
             free_errors(a);
-        append(a, nb);//S'il n'y a pas d'erreur, ajouter le noeud à la liste chaînée en prenant un pointeur pour empiler "a", créer un nouveau nœud et attribuer "nb" à ce nouveau noeud.
+        append(a, nb);//Si il n'y a pas d'erreur, ajoute le noeud à la liste chaînée en prenant un pointeur pour empiler "a", crée un nouveau noeud et attribuer "nb" à ce nouveau noeud.
         i++;
     }
 }

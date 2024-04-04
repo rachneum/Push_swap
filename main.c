@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 14:40:30 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/04 09:34:19 by rachou           ###   ########.fr       */
+/*   Created: 2024/04/04 10:55:18 by rachou            #+#    #+#             */
+/*   Updated: 2024/04/04 11:10:54 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,13 @@ int main(int argc, char **argv)
     t_stack *a;
     t_stack *b;
 
-    a = NULL;
-    b = NULL;
-    if (argc < 2 || (argc == 2 && !argv[1][0]))//Ou si dans le deuxième arg la position 0 est vide.
-        return (0);
-    if (argc == 2)//Si il y a deux arguments.
+    a = 0;
+    b = 0;
+    if (argc < 2 || ((argc == 2) && !argv[1][0]))
+        return (1);//return(1)?
+    if (argc == 2)
         argv = ft_split(argv[1], ' ');
-    if (!argv)
-        return (0);
-    stack_init(&a, argv + 1);
+    stack_init(&a, argv + 1);//+1?
     if (!stack_sorted(a))
     {
         if (stack_len(a) == 2)
