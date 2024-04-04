@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 14:40:30 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/02 14:06:45 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/04 09:34:19 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main(int argc, char **argv)
         argv = ft_split(argv[1], ' ');
     if (!argv)
         return (0);
+    stack_init(&a, argv + 1);
     if (!stack_sorted(a))
     {
         if (stack_len(a) == 2)
@@ -34,4 +35,6 @@ int main(int argc, char **argv)
         else
             sort_stack(&a, &b);
     }
+    free_stack(&a);
+    return (0);
 }

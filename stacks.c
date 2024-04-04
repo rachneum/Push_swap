@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 14:58:54 by rachou            #+#    #+#             */
-/*   Updated: 2024/03/25 09:17:13 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/03 16:13:42 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void append(t_stack **stack, int nb)//Fonction qui recherche le dernier n
     }
 }
 
-void    init_stack_a(t_stack **a, char **argv)//Fonction qui lance la pile 'a' en gérant toutes les erreurs et en ajoutant les noeuds requis pour compléter une pile
+void    stack_init(t_stack **a, char **argv)//Fonction qui lance la pile 'a' en gérant toutes les erreurs et en ajoutant les noeuds requis pour compléter une pile
 {
     long    nb;
     int     i;

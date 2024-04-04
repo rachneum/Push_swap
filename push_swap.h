@@ -5,7 +5,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <limits.h>//Bibli me permettant d'utiliser LONG_MIN et LON_MAX.
-#include <stdbool.h>
+# include <stdbool.h>
 # include "Libft/libft.h"
 
 typedef struct s_stack
@@ -22,8 +22,6 @@ typedef struct s_stack
 int	error_syntax(char	*str_nb);
 int	error_duplicate(t_stack *a, int nb);
 int	stack_len(t_stack *stack);
-int	target_node_b(t_stack *a, t_stack *b);
-int	target_node_a(t_stack *a, t_stack *b);
 int	main(int argc, char **argv);
 
 void	free_stack(t_stack **stack);
@@ -40,14 +38,13 @@ void	sa(t_stack	**a);
 void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);
 void	current_index(t_stack *stack);
-void	push_cost(t_stack *a, t_stack *b);
+//void	sort_stack(t_stack **a, t_stack **b);
 void	sort_three(t_stack **a);
-void	init_stack_a(t_stack **a, char **argv);
+void	stack_init(t_stack **a, char **argv);
 
 t_stack	*find_last_node(t_stack *stack);
 t_stack	*find_min(t_stack *stack);
 t_stack	*find_max(t_stack *stack);
-t_stack	sort_stack(t_stack **a, t_stack **b);
 
 bool	stack_sorted(t_stack *stack);
 
