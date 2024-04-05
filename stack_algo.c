@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cost_analisis.c                                    :+:      :+:    :+:   */
+/*   stack_algo.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 16:29:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/04 17:09:13 by rachou           ###   ########.fr       */
+/*   Created: 2024/04/05 11:21:35 by rachou            #+#    #+#             */
+/*   Updated: 2024/04/05 16:06:57 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void target_node_b(t_stack *a, t_stack *b)//Trouve les noeuds target dans ma stack 'b' pour les noeuds de la stack 'a'.
+static void	target_node_b(t_stack *a, t_stack *b)//Trouve les noeuds target dans ma stack 'b' pour les noeuds de la stack 'a'.
 {
-    t_stack *target_node;
-    t_stack *current_b;//Permet de me servir de ma stack 'b' sans la modifier (une sorte de copie)
-    long    target;
+    t_stack	*target_node;
+    t_stack	*current_b;//Permet de me servir de ma stack 'b' sans la modifier (une sorte de copie)
+    long	target;
 
     while (a)
     {
@@ -39,11 +39,11 @@ static void target_node_b(t_stack *a, t_stack *b)//Trouve les noeuds target dans
     }
 }
 
-static void target_node_a(t_stack *a, t_stack *b)//Permet de trouver les noeuds target dans ma stack 'a' pour les noeuds de la stack 'b'.
+static void	target_node_a(t_stack *a, t_stack *b)//Permet de trouver les noeuds target dans ma stack 'a' pour les noeuds de la stack 'b'.
 {
-    t_stack *target_node;
-    t_stack *current_a;//Permet de me servir de ma stack 'a' sans la modifier (une sorte de copie)
-    long    target;
+    t_stack	*target_node;
+    t_stack	*current_a;//Permet de me servir de ma stack 'a' sans la modifier (une sorte de copie)
+    long	target;
 
     while (b)
     {
@@ -66,23 +66,23 @@ static void target_node_a(t_stack *a, t_stack *b)//Permet de trouver les noeuds 
     }
 }
 
-void	set_index(t_stack *stack)
+static void	cost_analysis_a(t_stack *a, t_stack *b)//?
 {
-	int	i;
-	int	median;
 
-    if (!stack)
-        return ;
-	i = 0;
-	median = (stack_len(stack) / 2);
-	while (stack)
-	{
-		stack->index = i;
-		if (i <= median)
-			stack->median = true;
-		else
-			stack->median = false;
-		stack = stack->next;
-		i++;
-	}
+}
+
+void	init_nodes_a(t_stack *a, t_stack *b)//?
+{
+	set_index(a);
+	set_index(b);
+	target_node_b(a, b);
+	cost_analysis_a(a, b);
+	set_cheapest(a);
+}
+
+void	init_nodes_b(t_stack *a, t_stack *b)
+{
+	set_index(a);
+	set_index(b);
+	target_node_a(a, b);
 }

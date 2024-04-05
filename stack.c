@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 16:31:04 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/04 17:05:13 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/05 15:42:32 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void    stack_init(t_stack **a, char **argv)//Lance la pile 'a' en gérant toute
     i = 0;
     while (argv[i])
     {
-        if(error_syntax(argv[i]))
+        if(syntax_error(argv[i]))
             free_errors(a);
         nb = ft_atol(argv[i]);
         if (nb > LONG_MAX || nb < LONG_MIN)//Vérifie overflow.

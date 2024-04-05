@@ -1,44 +1,41 @@
 NAME	= push_swap
 
-
 src = 	./main.c \
+		./ft_split.c \
 		./error.c \
 		./ft_push.c \
 		./ft_swap.c \
 		./ft_rotate.c \
 		./ft_reverse_rotate.c \
-		./cost_analisis.c \
+		./sort_stack_last.c \
 		./sort_stack.c \
+		./stack_algo.c \
+		./stack_cost_analisis.c \
 		./stack_utils.c \
 		./stack.c \
 
-OBJS 	= $(src:.c=.o)
+OBJS = ${src:.c=.o}
 
-HEADER	= includes
+CC = cc
 
-CC 		= cc
+RM = rm -f
 
-CFLAGS 	= -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 
-LIB = libft/libft.a
+%.o: %.c
+	${CC} ${CFLAGS} -c $< -o $@
 
-.c.o:		%.o : %.c
-	$(CC) $(CFLAGS) -I$(HEADER) -c $< -o $(<:.c=.o)
+${NAME}: ${OBJS}
+	${CC} -o ${NAME} ${OBJS}
 
-all: 		$(NAME)
-
-$(NAME):	$(OBJS)
-	make -C ./libft
-	$(CC) $(OBJS) -Llibft -lft -o $(NAME)
+all: ${NAME}
 
 clean:
-	make clean -C ./libft
-	rm -f $(OBJS)
+	${RM} ${OBJS}
 
-fclean: 	clean
-	make fclean -C ./libft
-	rm -f $(NAME)
+fclean: clean
+	${RM} ${NAME}
 
-re:			fclean all
+re: fclean all
 
-.PHONY:	all clean fclean re
+.PHONY: all clean fclean re

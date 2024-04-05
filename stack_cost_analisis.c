@@ -1,41 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack.c                                       :+:      :+:    :+:   */
+/*   stack_cost_analisis.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 14:54:59 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/05 15:34:44 by rachou           ###   ########.fr       */
+/*   Created: 2024/04/04 16:29:37 by rachou            #+#    #+#             */
+/*   Updated: 2024/04/05 16:07:33 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool	stack_sorted(t_stack *stack)
+void	set_index(t_stack *stack)
+{
+	int	i;
+	int	median;
+
+    if (!stack)
+        return ;
+	i = 0;
+	median = (stack_len(stack) / 2);
+	while (stack)
+	{
+		stack->index = i;
+		if (i <= median)
+			stack->median = true;
+		else
+			stack->median = false;
+		stack = stack->next;
+		i++;
+	}
+}
+
+void	set_cheapest(t_stack *stack)//?
+{
+
+}
+
+t_stack	*get_cheapest(t_stack *stack)//?
 {
 	if (!stack)
 		return (NULL);
-	while (stack->next)
+	while (stack)
 	{
-		if (stack->value > stack->next->value)
-			return (false);
+		if (stack->cheapest)
+			return (stack);
 		stack = stack->next;
 	}
-	return (true);
-}
-
-void	sort_three(t_stack **a)
-{
-	t_stack	*biggest_node;
-
-	if (!a)
-		return ;
-	biggest_node = find_max(*a);
-	if (*a == biggest_node)
-		ra(a);
-	else if ((*a)->next == biggest_node)
-		rra(a);
-	else if ((*a)->value > (*a)->next->value)
-		sa(a);
+	return (NULL);
 }
