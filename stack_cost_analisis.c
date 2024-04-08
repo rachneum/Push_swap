@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 16:29:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/05 16:07:33 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/08 14:30:34 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,29 @@ void	set_index(t_stack *stack)
 	}
 }
 
-void	set_cheapest(t_stack *stack)//?
+void	set_cheapest(t_stack *stack)//
 {
+	long			cheapest_value;
+	t_stack			*cheapest_node;
 
+	if (!stack)
+		return ;
+	cheapest_value = stack->push_price;
+	cheapest_node = stack;
+	stack = stack->next;
+	while (stack)
+	{
+		if (stack->push_price < cheapest_value)
+		{
+			cheapest_value = stack->push_price;
+			cheapest_node = stack;
+		}
+		stack = stack->next;
+	}
+	cheapest_node->cheapest = true;
 }
 
-t_stack	*get_cheapest(t_stack *stack)//?
+t_stack	*get_cheapest(t_stack *stack)//
 {
 	if (!stack)
 		return (NULL);

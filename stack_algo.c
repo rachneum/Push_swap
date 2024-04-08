@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 11:21:35 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/05 16:06:57 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/08 14:30:40 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,24 @@ static void	target_node_a(t_stack *a, t_stack *b)//Permet de trouver les noeuds 
     }
 }
 
-static void	cost_analysis_a(t_stack *a, t_stack *b)//?
+static void	cost_analysis_a(t_stack *a, t_stack *b)//
 {
+    int	len_a;
+	int len_b;
 
+	len_a = stack_len(a);
+	len_b = stack_len(b);
+	while (a)
+	{
+		a->push_price = a->index;
+		if (!(a->median))
+			a->push_price = len_a - (a->index);
+		if (a->target_node->median)
+			a->push_price += a->target_node->index;
+		else
+			a->push_price += len_b - (a->target_node->index);
+		a = a->next;
+	}
 }
 
 void	init_nodes_a(t_stack *a, t_stack *b)//?
