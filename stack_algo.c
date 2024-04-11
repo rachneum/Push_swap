@@ -6,16 +6,16 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 11:21:35 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/08 14:30:40 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/08 15:38:12 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	target_node_b(t_stack *a, t_stack *b)//Trouve les noeuds target dans ma stack 'b' pour les noeuds de la stack 'a'.
+static void	target_node_b(t_stack *a, t_stack *b)
 {
     t_stack	*target_node;
-    t_stack	*current_b;//Permet de me servir de ma stack 'b' sans la modifier (une sorte de copie)
+    t_stack	*current_b;
     long	target;
 
     while (a)
@@ -32,17 +32,17 @@ static void	target_node_b(t_stack *a, t_stack *b)//Trouve les noeuds target dans
             current_b = current_b->next;
         }
         if (target == LONG_MIN)
-            a->target_node = find_max(b);//Dans le cas où mon noeud 'a' ne trouve pas un noeud target le plus proche petit, j'irai trouver le plus proche grand à la place.
+            a->target_node = find_max(b);
         else
             a->target_node = target_node;
         a = a->next;
     }
 }
 
-static void	target_node_a(t_stack *a, t_stack *b)//Permet de trouver les noeuds target dans ma stack 'a' pour les noeuds de la stack 'b'.
+static void	target_node_a(t_stack *a, t_stack *b)
 {
     t_stack	*target_node;
-    t_stack	*current_a;//Permet de me servir de ma stack 'a' sans la modifier (une sorte de copie)
+    t_stack	*current_a;
     long	target;
 
     while (b)
@@ -59,7 +59,7 @@ static void	target_node_a(t_stack *a, t_stack *b)//Permet de trouver les noeuds 
             current_a = current_a->next;
         }
         if (target == LONG_MAX)
-            b->target_node = find_min(a);//Dans le cas où mon noeud 'b' ne trouve pas un noeud target le plus proche grand, j'irai trouver le plus proche petit à la place.
+            b->target_node = find_min(a);
         else
             b->target_node = target_node;
         b = b->next;
@@ -86,7 +86,7 @@ static void	cost_analysis_a(t_stack *a, t_stack *b)//
 	}
 }
 
-void	init_nodes_a(t_stack *a, t_stack *b)//?
+void	init_nodes_a(t_stack *a, t_stack *b)//
 {
 	set_index(a);
 	set_index(b);

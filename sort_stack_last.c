@@ -6,13 +6,13 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:13:28 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/08 14:30:08 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/08 15:38:20 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	prep_for_push(t_stack **stack, t_stack *top_node, char stack_name)//?
+void	prep_for_push(t_stack **stack, t_stack *top_node, char stack_name)//
 {
 	while (*stack != top_node)
 	{

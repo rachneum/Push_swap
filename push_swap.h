@@ -5,7 +5,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdbool.h>
-# include <limits.h>//Bibli me permettant d'utiliser LONG_MIN et LON_MAX.
+# include <limits.h>
 
 typedef struct s_stack
 {
