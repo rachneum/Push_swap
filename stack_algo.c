@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_algo.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 11:21:35 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/08 15:38:12 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/11 13:21:33 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,62 +14,62 @@
 
 static void	target_node_b(t_stack *a, t_stack *b)
 {
-    t_stack	*target_node;
-    t_stack	*current_b;
-    long	target;
+	t_stack	*target_node;
+	t_stack	*current_b;
+	long	target;
 
-    while (a)
-    {
-        current_b = b;
-        target = LONG_MIN;
-	    while (current_b)
-        {
-            if ((current_b->value < a->value) && (current_b->value > target))
-            {
-                target_node = current_b;
-                target = current_b->value;
-            }
-            current_b = current_b->next;
-        }
-        if (target == LONG_MIN)
-            a->target_node = find_max(b);
-        else
-            a->target_node = target_node;
-        a = a->next;
-    }
+	while (a)
+	{
+		current_b = b;
+		target = LONG_MIN;
+		while (current_b)
+		{
+			if ((current_b->value < a->value) && (current_b->value > target))
+			{
+				target_node = current_b;
+				target = current_b->value;
+			}
+			current_b = current_b->next;
+		}
+		if (target == LONG_MIN)
+			a->target_node = find_max(b);
+		else
+			a->target_node = target_node;
+		a = a->next;
+	}
 }
 
 static void	target_node_a(t_stack *a, t_stack *b)
 {
-    t_stack	*target_node;
-    t_stack	*current_a;
-    long	target;
+	t_stack	*target_node;
+	t_stack	*current_a;
+	long	target;
 
-    while (b)
-    {
-        current_a = a;
-        target = LONG_MAX;
-	    while (current_a)
-        {
-            if ((current_a->value > b->value) && (current_a->value > target))
-            {
-                target_node = current_a;
-                target = current_a->value;
-            }
-            current_a = current_a->next;
-        }
-        if (target == LONG_MAX)
-            b->target_node = find_min(a);
-        else
-            b->target_node = target_node;
-        b = b->next;
-    }
+	while (b)
+	{
+		current_a = a;
+		target = LONG_MAX;
+		while (current_a)
+		{
+			if ((current_a->value > b->value) && (current_a->value > target))
+			{
+				target_node = current_a;
+				target = current_a->value;
+			}
+			current_a = current_a->next;
+		}
+		if (target == LONG_MAX)
+			b->target_node = find_min(a);
+		else
+			b->target_node = target_node;
+		b = b->next;
+	}
 }
 
 static void	cost_analysis_a(t_stack *a, t_stack *b)//
 {
-    int	len_a;
-	int len_b;
+	int	len_a;
+	int	len_b;
 
 	len_a = stack_len(a);
 	len_b = stack_len(b);

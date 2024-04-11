@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 13:35:52 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/08 15:42:35 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/11 13:33:55 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ static void	push(t_stack **dst, t_stack **src)
 	}
 }
 
-void    pa(t_stack **a, t_stack **b)
+void	pa(t_stack **a, t_stack **b)
 {
-    push(a, b);
-    write(1, "pa\n", 3);
+	push(a, b);
+	write(1, "pa\n", 3);
 }
 
-void    pb(t_stack **b, t_stack **a)
+void	pb(t_stack **b, t_stack **a)
 {
-    push(b, a);
-    write(1, "pb\n", 3);
+	push(b, a);
+	write(1, "pb\n", 3);
 }

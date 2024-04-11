@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_reverse_rotate.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 14:20:01 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/08 15:42:22 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/11 13:33:07 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,19 @@ static void	rev_rotate(t_stack **stack)
 
 void	rra(t_stack **a)
 {
-    rev_rotate(a);
+	rev_rotate(a);
 	write(1, "rra\n", 4);
 }
+
 void	rrb(t_stack **b)
 {
-    rev_rotate(b);
-    write(1, "rrb\n", 4);
+	rev_rotate(b);
+	write(1, "rrb\n", 4);
 }
+
 void	rrr(t_stack **a, t_stack **b)
 {
-    rev_rotate(a);
-    rev_rotate(b);
+	rev_rotate(a);
+	rev_rotate(b);
 	write(1, "rrr\n", 4);
 }

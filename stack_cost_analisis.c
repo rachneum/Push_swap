@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_cost_analisis.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 16:29:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/08 14:30:34 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/11 13:10:48 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	set_index(t_stack *stack)
 	int	i;
 	int	median;
 
-    if (!stack)
-        return ;
+	if (!stack)
+		return ;
 	i = 0;
 	median = (stack_len(stack) / 2);
 	while (stack)
