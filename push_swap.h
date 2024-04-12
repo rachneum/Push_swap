@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:27:47 by raneuman          #+#    #+#             */
-/*   Updated: 2024/04/11 13:27:48 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/12 13:11:08 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_stack
 	bool			cheapest;//
 }					t_stack;
 
-char	**ft_split(char const *s, char c);
+char	**ft_split(char *str, char sep);
 
 t_stack	*find_last_node(t_stack *stack);
 t_stack	*find_min(t_stack *stack);
