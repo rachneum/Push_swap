@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:13:28 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/08 15:38:20 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/12 15:13:19 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,26 +59,11 @@ static void	move_b_to_a(t_stack **a, t_stack **b)
 	pa(a, b);
 }
 
-void	min_on_top(t_stack **a)
-{
-	while ((*a)->value != find_min(*a)->value)
-	{
-		if (find_min(*a)->median)
-			ra(a);
-		else
-			rra(a);
-	}
-}
-
 void	sort_stack(t_stack **a, t_stack **b)
 {
 	int	len_a;
 
 	len_a = stack_len(*a);
-	/*if (stack_sorted(*a))
-		return ;
-	if (len_a <= 3)
-		sort_three(a);*/
 	if (len_a-- > 3)//
 		pb(b, a);
 	if (len_a-- > 3)//

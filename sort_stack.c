@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 14:54:59 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/05 15:34:44 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/12 15:13:21 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,28 @@ bool	stack_sorted(t_stack *stack)
 	return (true);
 }
 
+void	min_on_top(t_stack **a)
+{
+	while ((*a)->value != find_min(*a)->value)
+	{
+		if (find_min(*a)->median)
+			ra(a);
+		else
+			rra(a);
+	}
+}
+
 void	sort_three(t_stack **a)
 {
 	t_stack	*biggest_node;
 
-	if (!a)
+	if (!a || !(*a) || !(*a)->next)
 		return ;
 	biggest_node = find_max(*a);
 	if (*a == biggest_node)
 		ra(a);
 	else if ((*a)->next == biggest_node)
 		rra(a);
-	else if ((*a)->value > (*a)->next->value)
+	if ((*a)->value > (*a)->next->value)
 		sa(a);
 }
