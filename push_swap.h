@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:27:47 by raneuman          #+#    #+#             */
-/*   Updated: 2024/04/12 13:11:08 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/15 11:59:37 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ typedef struct s_stack
 	struct s_stack	*target_node;
 	int				value;
 	int				index;
-	int				push_price;//
+	int				push_price;
 	bool			median;
-	bool			cheapest;//
+	bool			cheapest;
 }					t_stack;
 
 char	**ft_split(char *str, char sep);
@@ -36,7 +36,7 @@ char	**ft_split(char *str, char sep);
 t_stack	*find_last_node(t_stack *stack);
 t_stack	*find_min(t_stack *stack);
 t_stack	*find_max(t_stack *stack);
-t_stack	*get_cheapest(t_stack *stack);//
+t_stack	*get_cheapest(t_stack *stack);
 
 int		main(int argc, char **argv);
 int		syntax_error(char *str_nb);
@@ -57,14 +57,14 @@ void	rrr(t_stack **a, t_stack **b);
 void	free_stack(t_stack **stack);
 void	free_errors(t_stack **a);
 void	stack_init(t_stack **a, char **argv);
+void	min_on_top(t_stack **a);
 void	sort_three(t_stack **a);
-void	sort_stack(t_stack **a, t_stack **b);//
+void	sort_stack(t_stack **a, t_stack **b);
 void	set_index(t_stack *stack);
 void	init_nodes_a(t_stack *a, t_stack *b);
-void	set_cheapest(t_stack *stack);//
+void	set_cheapest(t_stack *stack);
 void	init_nodes_b(t_stack *a, t_stack *b);
-void	prep_for_push(t_stack **stack, t_stack *top_node, char stack_name);//
-void	min_on_top(t_stack **a);//
+void	prep_for_push(t_stack **stack, t_stack *top_node, char stack_name);
 
 bool	stack_sorted(t_stack *stack);
 

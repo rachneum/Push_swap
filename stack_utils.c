@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 16:35:41 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/11 13:09:52 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/15 11:27:45 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ int	stack_len(t_stack *stack)
 {
 	int	count;
 
+	count = 0;
 	if (stack == NULL)
 		return (0);
-	count = 0;
 	while (stack)
 	{
-		++count;
 		stack = stack->next;
+		++count;
 	}
 	return (count);
 }

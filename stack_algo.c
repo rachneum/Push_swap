@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 11:21:35 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/11 13:21:33 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/15 10:23:50 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static void	target_node_a(t_stack *a, t_stack *b)
 	}
 }
 
-static void	cost_analysis_a(t_stack *a, t_stack *b)//
+static void	cost_analysis_a(t_stack *a, t_stack *b)
 {
 	int	len_a;
 	int	len_b;
@@ -86,7 +86,7 @@ static void	cost_analysis_a(t_stack *a, t_stack *b)//
 	}
 }
 
-void	init_nodes_a(t_stack *a, t_stack *b)//
+void	init_nodes_a(t_stack *a, t_stack *b)
 {
 	set_index(a);
 	set_index(b);

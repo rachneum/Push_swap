@@ -26,7 +26,7 @@ CFLAGS = -Wall -Wextra -Werror
 	${CC} ${CFLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}
-	${CC} -o ${NAME} ${OBJS}
+	${CC} ${OBJS} -o ${NAME}
 
 all: ${NAME}
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 14:54:59 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/12 15:13:21 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/15 11:56:15 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ bool	stack_sorted(t_stack *stack)
 
 void	min_on_top(t_stack **a)
 {
+	if (!a || !*a)
+		return ;
 	while ((*a)->value != find_min(*a)->value)
 	{
 		if (find_min(*a)->median)

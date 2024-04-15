@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 15:45:13 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/12 13:10:52 by rachou           ###   ########.fr       */
+/*   Updated: 2024/04/15 11:54:31 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 static int	cnt_words(char *str, char sep)
 {
@@ -45,7 +55,7 @@ static char	*get_next_words(char *str, char sep)
 
 	len = 0;
 	i = 0;
-	while (str[sp] == sep)
+	while (str[sp] && str[sp] == sep)
 		sp++;
 	while ((str[len + sp] != sep) && str[len + sp])
 		len++;
@@ -64,6 +74,8 @@ char	**ft_split(char *str, char sep)
 	int		i;
 	char	**s;
 
+	if (ft_strlen(str) == 1)
+		return (NULL);
 	i = 0;
 	words_nbr = cnt_words(str, sep);
 	s = malloc(sizeof(char *) * (words_nbr + 2));

@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 16:29:37 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/11 13:10:48 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/15 10:23:40 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	set_index(t_stack *stack)
 	}
 }
 
-void	set_cheapest(t_stack *stack)//
+void	set_cheapest(t_stack *stack)
 {
 	long			cheapest_value;
 	t_stack			*cheapest_node;
@@ -55,7 +55,7 @@ void	set_cheapest(t_stack *stack)//
 	cheapest_node->cheapest = true;
 }
 
-t_stack	*get_cheapest(t_stack *stack)//
+t_stack	*get_cheapest(t_stack *stack)
 {
 	if (!stack)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 16:31:04 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/11 12:01:03 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/15 11:56:42 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ void	stack_init(t_stack **a, char **argv)
 	int		i;
 
 	i = 0;
+	if (!argv || !(*argv))
+		return ;
 	while (argv[i])
 	{
 		if (syntax_error(argv[i]))
