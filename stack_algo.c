@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 11:21:35 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/15 10:23:50 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/18 10:42:43 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	target_node_a(t_stack *a, t_stack *b)
 		target = LONG_MAX;
 		while (current_a)
 		{
-			if ((current_a->value > b->value) && (current_a->value > target))
+			if ((current_a->value > b->value) && (current_a->value < target))
 			{
 				target_node = current_a;
 				target = current_a->value;

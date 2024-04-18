@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 16:31:04 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/15 11:56:42 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/18 13:17:46 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	stack_init(t_stack **a, char **argv)
 		if (syntax_error(argv[i]))
 			free_errors(a);
 		nb = ft_atol(argv[i]);
-		if (nb > LONG_MAX || nb < LONG_MIN)
+		if (nb > INT_MAX || nb < INT_MIN)
 			free_errors(a);
 		if (error_duplicate(*a, nb))
 			free_errors(a);

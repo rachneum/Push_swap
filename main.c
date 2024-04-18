@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 10:55:18 by rachou            #+#    #+#             */
-/*   Updated: 2024/04/15 12:15:25 by raneuman         ###   ########.fr       */
+/*   Updated: 2024/04/18 10:42:14 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	a = 0;
 	b = 0;
 	if (argc < 2)
-		return (1);
+		return (0);
 	if (((argc == 2) && !argv[1][0]))
 		return (write(1, "Error\n", 6));
 	else if (argc == 2)
