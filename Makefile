@@ -1,18 +1,18 @@
 NAME	= push_swap
 
-src = 	./main.c \
-		./ft_split.c \
-		./error.c \
-		./ft_push.c \
-		./ft_swap.c \
-		./ft_rotate.c \
-		./ft_reverse_rotate.c \
-		./sort_stack_last.c \
-		./sort_stack.c \
-		./stack_algo.c \
-		./stack_cost_analisis.c \
-		./stack_utils.c \
-		./stack.c \
+src = 	main.c \
+		ft_split.c \
+		error.c \
+		ft_push.c \
+		ft_swap.c \
+		ft_rotate.c \
+		ft_reverse_rotate.c \
+		sort_stack_last.c \
+		sort_stack.c \
+		stack_algo.c \
+		stack_cost_analisis.c \
+		stack_utils.c \
+		stack.c
 
 OBJS = ${src:.c=.o}
 
